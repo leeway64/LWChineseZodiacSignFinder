@@ -1,9 +1,7 @@
-# Project Template
+# LWChineseZodiacSignFinder
 
-Collected here are important files that can be used in any programming project or repository.
-
-To use, clone this repository, then rename the directory to the name of your project and delete the
-.git folder.
+LWChineseZodiacSignFinder is an application for finding the corresponding Chinese Zodiac sign for a
+certain year.
 
 ## Installation
 
