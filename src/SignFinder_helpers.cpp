@@ -1,20 +1,23 @@
+#include <string>
+#include <unordered_map>
+
 #include "SignFinder_helpers.hpp"
 
 
-enum class ZodiacAnimal
+std::unordered_map<int, std::string> ZodiacAnimals
         {
-            Rat = 1,
-            Ox = 2,
-            Tiger = 3,
-            Rabbit = 4,
-            Dragon = 5,
-            Snake = 6,
-            Horse = 7,
-            Goat = 8,
-            Monkey = 9,
-            Rooster = 10,
-            Dog = 11,
-            Pig = 12
+            {1, "Rat"},
+            {2, "Ox"},
+            {3, "Tiger"},
+            {4, "Rabbit"},
+            {5, "Dragon"},
+            {6, "Snake"},
+            {7, "Horse"},
+            {8, "Goat"},
+            {9, "Monkey"},
+            {10, "Rooster" },
+            {11, "Dog" },
+            {12, "Pig"}
         };
 
 
@@ -22,10 +25,9 @@ enum class ZodiacAnimal
 // 2020: 1, rat
 // 2021: 2, Ox
 // 2022: 3, Tiger
-ZodiacAnimal SignFinder_helpers::getZodiacSign(const int &year)
+std::string SignFinder_helpers::getZodiacSign(const int &year)
 {
     const int animalNumber = (year + 9) % 12;
-    ZodiacAnimal animal = static_cast<ZodiacAnimal>(animalNumber);
-    std::vector<ZodiacAnimal> animal_vector
+    std::string animal = ZodiacAnimals[animalNumber];
     return animal;
 }

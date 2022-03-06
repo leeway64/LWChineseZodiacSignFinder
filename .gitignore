@@ -1,2 +1,12 @@
 # Executables
-bin/
+*.exe
+
+# Compiled object files
+*.obj
+
+# Conan files
+conan.lock
+conanbuildinfo.args
+conanbuildinfo.txt
+conaninfo.txt
+graph_info.json

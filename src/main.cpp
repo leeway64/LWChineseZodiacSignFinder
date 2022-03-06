@@ -1,4 +1,7 @@
 #include <iostream>
+#include <vector>
+#include <fmt/core.h>
+
 #include "SignFinder_helpers.hpp"
 
 
