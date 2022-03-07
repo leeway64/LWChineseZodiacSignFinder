@@ -5,12 +5,13 @@ certain year.
 
 ## Installation
 
-To install LWChineseZodiacSignFinder, clone this repository onto your machine. Then, in the root
-directory of the repository, if using a Linux machine, run
-`g++ src/main.cpp src/SignFinder_helpers.cpp '@conanbuildinfo.args' -o bin/LWChineseZodiacSignFinder`.
+1. Clone this repository onto your machine.
 
-If using a Windows machine, run
-`cl /EHsc src/main.cpp src/SignFinder_helpers.cpp @conanbuildinfo.args -o bin/LWChineseZodiacSignFinder`.
+2. In the root directory of the repository, run `conan install .`.
+
+3. If using a Linux machine, run `g++ src/main.cpp src/SignFinder_helpers.cpp '@conanbuildinfo.args' -o bin/LWChineseZodiacSignFinder`.
+
+   - If using a Windows machine, run `cl /EHsc src/main.cpp src/SignFinder_helpers.cpp @conanbuildinfo.args /std:c++latest /Zc:__cplusplus /link /out:bin/LWChineseZodiacSignFinder.exe`.
 
 ## Usage
 
@@ -21,6 +22,9 @@ something like this:
 ```
 
 Notice that the years to analyze are in a .
+
+This TOML file must be in the `bin` folder. Once you have created the TOML file, simply run
+`bin/LWChineseZodiacSignFinder`.
 
 ## Third-party tools
 

@@ -10,3 +10,6 @@ conanbuildinfo.args
 conanbuildinfo.txt
 conaninfo.txt
 graph_info.json
+
+# User input
+input_file.toml

@@ -4,7 +4,7 @@
 class SignFinder_helpers
 {
 public:
-    static std::string getZodiacSign(const int& year);
+    static const std::string getZodiacSign(const int& year);
 };
 
 #endif //LWCHINESEZODIACSIGNFINDER_SIGNFINDER_HELPERS_HPP
