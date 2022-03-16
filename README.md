@@ -11,7 +11,7 @@ certain year.
 
 3. If using a Linux machine, run `g++ src/main.cpp src/SignFinder_helpers.cpp '@conanbuildinfo.args' -o bin/LWChineseZodiacSignFinder`.
 
-   - If using a Windows machine, run `cl /EHsc src/main.cpp src/SignFinder_helpers.cpp @conanbuildinfo.args /std:c++latest /Zc:__cplusplus /link /out:bin/LWChineseZodiacSignFinder.exe`.
+   - If using a Windows machine, run `cl /EHsc src/main.cpp src/SignFinder_helpers.cpp src/SignFinder_base.cpp @conanbuildinfo.args /std:c++latest /Zc:__cplusplus /link /out:bin/LWChineseZodiacSignFinder.exe`.
 
 ## Usage
 
@@ -41,8 +41,10 @@ This TOML file must be in the `bin` folder. Once you have created the TOML file,
 
 ## Third-party tools
 
-- TOML11:
+- [CMake](https://cmake.org/) (BSD-3-Clause): Build system generator.
 
-- Catch2:
+- [TOML11](https://github.com/ToruNiina/toml11) (MIT License): TOML parser/encoder.
 
-- fmt: 
+- [Catch2](https://github.com/catchorg/Catch2/tree/v2.x) (MIT License): Unit testing framework.
+
+- [{fmt}](https://github.com/fmtlib/fmt) (MIT License): Formatting library.
