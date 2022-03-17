@@ -29,10 +29,11 @@ int main()
     }
     else
     {
-//        toml::value toml_data = toml::parse("input_file.toml");
+        toml::value toml_data = toml::parse("input_file.toml");
 
-//        const std::vector<int> years = toml::find<std::vector<int>>(toml_data, "years");
-        const std::vector<int> years = {1998, 2022};
+        const std::vector<int> years = toml::find<std::vector<int>>(toml_data, "years");
+        std::cout<<std::filesystem::current_path() << std::endl;
+//        const std::vector<int> years = {1998, 2022};
         for (auto year: years) {
             std::string ZodiacSign = SignFinder_helpers::getZodiacSign(year);
             std::cout << year << ": Year of the " << ZodiacSign << std::endl;

@@ -33,10 +33,11 @@ This TOML file must be in the `bin` folder. Once you have created the TOML file,
 
 ## Running Unit Tests
 
-1. If using a Linux machine, run `g++ -o tests/tests`.
-   - If using a Windows machine, run `cl /link /out:tests/tests.exe`.
+1. If using a Linux machine, run `g++ -o tests/test_suite`.
+   - If using a Windows machine, run
+     `cl tests/Catch2_main.cpp tests/test_suite.cpp src/SignFinder_helpers.cpp src/SignFinder_base.cpp @conanbuildinfo.args /link /out:tests/test_suite.exe`.
    
-2. Run `tests/tests.exe` in the root directory of the repository.
+2. Run `tests/test_suite` in the root directory of the repository.
 
 
 ## Third-party tools
