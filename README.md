@@ -39,9 +39,10 @@ Linux machine, simply run `bin/LWChineseZodiacSignFinder`. If you are using a Wi
 The output will be:
 
 ```
-1940: Year of the Dragon
-1968: Year of the Monkey
-1998: Year of the Tiger
+Entered years and corresponding zodiac signs:
+        1940: Year of the Dragon
+        1968: Year of the Monkey
+        1998: Year of the Tiger
 ```
 
 ## Running Unit Tests
@@ -58,7 +59,7 @@ The output will be:
 
 - [CMake](https://cmake.org/) (BSD-3-Clause): Build system generator.
 
-- [TOML11](https://github.com/ToruNiina/toml11) (MIT License): TOML parser/encoder.
+- [toml11](https://github.com/ToruNiina/toml11) (MIT License): TOML parser/encoder.
 
 - [Catch2](https://github.com/catchorg/Catch2/tree/v2.x) (MIT License): Unit testing framework.
 

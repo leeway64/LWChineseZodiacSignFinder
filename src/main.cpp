@@ -31,7 +31,7 @@ int main()
     }
     else
     {
-        fmt::print("\nEntered years and corresponding zodiac signs\n");
+        fmt::print("\nEntered years and corresponding zodiac signs:\n");
         // Get the vector of years from the TOML file.
         toml::value toml_data = toml::parse("input_file.toml");
         const std::vector<int> years = toml::find<std::vector<int>>(toml_data, "User_input", "years");
