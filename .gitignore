@@ -13,3 +13,6 @@ graph_info.json
 
 # User input
 input_file.toml
+
+# {fmt} library
+fmt/

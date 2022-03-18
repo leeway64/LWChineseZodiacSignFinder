@@ -9,9 +9,13 @@ certain year.
 
 2. In the root directory of the repository, run `conan install .`.
 
-3. If using a Linux machine, run `g++ src/main.cpp src/SignFinder_helpers.cpp '@conanbuildinfo.args' -o bin/LWChineseZodiacSignFinder`.
+3. Add the [{fmt}](https://github.com/fmtlib/fmt) library as a Git submodule in the root directory.
 
-   - If using a Windows machine, run `cl /EHsc src/main.cpp src/SignFinder_helpers.cpp src/SignFinder_base.cpp @conanbuildinfo.args /std:c++latest /Zc:__cplusplus /link /out:bin/LWChineseZodiacSignFinder.exe`.
+4. If using a Linux machine, run
+   `g++ src/main.cpp src/SignFinder_helpers.cpp '@conanbuildinfo.args' -o bin/LWChineseZodiacSignFinder`.
+
+   - If using a Windows machine, run
+     `cl /EHsc src/main.cpp src/SignFinder_helpers.cpp src/SignFinder_base.cpp @conanbuildinfo.args /std:c++latest /Zc:__cplusplus /link /out:bin/LWChineseZodiacSignFinder.exe`.
 
 ## Usage
 
@@ -19,7 +23,7 @@ LWChineseZodiacSignFinder takes in input from a TOML file. Let's assume the inpu
 something like this:
 
 ```toml
-[User input]
+[User_input]
 # Enter the years in which you would like to find Chinese zodiac signs for in an array.
 years = [1998, 2022, 2024]
 ```
@@ -30,6 +34,7 @@ Notice that the years to analyze are in an array.
 This TOML file must be in the `bin` folder. Once you have created the TOML file, simply run
 `bin/LWChineseZodiacSignFinder`.
 
+The output will be:
 
 ## Running Unit Tests
 
@@ -37,7 +42,8 @@ This TOML file must be in the `bin` folder. Once you have created the TOML file,
    - If using a Windows machine, run
      `cl tests/Catch2_main.cpp tests/test_suite.cpp src/SignFinder_helpers.cpp src/SignFinder_base.cpp @conanbuildinfo.args /link /out:tests/test_suite.exe`.
    
-2. Run `tests/test_suite` in the root directory of the repository.
+2. If using Linux, run `tests/test_suite` in the root directory of the repository.
+   - If using Windows, run `cd tests` then `test_suite`.
 
 
 ## Third-party tools
