@@ -32,7 +32,6 @@ years = [1940, 1968, 1998]
 
 Notice that the years to analyze are in an array.
 
-
 This TOML file must be in the `bin` folder. Once you have created the TOML file, if you are using a
 Linux machine, simply run `bin/LWChineseZodiacSignFinder`. If you are using a Windows machine, run
 `cd bin`, then `LWChineseZodiacSignFinder`.
