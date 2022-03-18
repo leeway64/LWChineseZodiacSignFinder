@@ -23,18 +23,27 @@ LWChineseZodiacSignFinder takes in input from a TOML file. Let's assume the inpu
 something like this:
 
 ```toml
+title = "TOML file for user input"
+
 [User_input]
 # Enter the years in which you would like to find Chinese zodiac signs for in an array.
-years = [1998, 2022, 2024]
+years = [1940, 1968, 1998]
 ```
 
 Notice that the years to analyze are in an array.
 
 
-This TOML file must be in the `bin` folder. Once you have created the TOML file, simply run
-`bin/LWChineseZodiacSignFinder`.
+This TOML file must be in the `bin` folder. Once you have created the TOML file, if you are using a
+Linux machine, simply run `bin/LWChineseZodiacSignFinder`. If you are using a Windows machine, run
+`cd bin`, then `LWChineseZodiacSignFinder`.
 
 The output will be:
+
+```
+1940: Year of the Dragon
+1968: Year of the Monkey
+1998: Year of the Tiger
+```
 
 ## Running Unit Tests
 

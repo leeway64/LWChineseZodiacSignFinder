@@ -4,7 +4,8 @@
 #include <fstream>
 
 #include <toml11/toml.hpp>
-#include <fmt/include/fmt/core.h>
+#define FMT_HEADER_ONLY
+#include "../fmt/include/fmt/format.h"
 
 #include "SignFinder_helpers.hpp"
 
@@ -12,8 +13,9 @@
 int main()
 {
     const std::string input_file_name = "input_file.toml";
-
     const std::filesystem::path input_file{ input_file_name };
+
+    // If a TOML file doesn't exist, create one and exit
     if (!std::filesystem::exists(input_file))
     {
         std::cout << "No input TOML file found" << std::endl;
@@ -29,12 +31,12 @@ int main()
     }
     else
     {
+        // Get the vector of years from the TOML file.
         toml::value toml_data = toml::parse("input_file.toml");
         const std::vector<int> years = toml::find<std::vector<int>>(toml_data, "User_input", "years");
-//        const std::vector<int> years = {1998, 2022};
-        for (auto year: years) {
+
+        for (const auto& year: years) {
             std::string ZodiacSign = SignFinder_helpers::getZodiacSign(year);
-//            std::cout << year << ": Year of the " << ZodiacSign << std::endl;
             std::cout << fmt::format("{}: Year of the {}", year, ZodiacSign) << std::endl;
         }
     }

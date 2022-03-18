@@ -6,6 +6,8 @@
 
 class SignFinder_base {
 public:
+    /// A map with each number (1-12) corresponding with the appropriate animal.
+    /// i.e., 3->Tiger, 5->Dragon, etc.
     static std::unordered_map<int, std::string> ZodiacAnimals;
 };
 
