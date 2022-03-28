@@ -11,7 +11,7 @@ certain year.
 2. In the root directory of the repository, run `conan install .`.
 
 3. If using a Linux machine, run
-   `g++ src/main.cpp src/SignFinder_helpers.cpp '@conanbuildinfo.args' -o bin/LWChineseZodiacSignFinder`.
+   `g++ src/main.cpp src/SignFinder_helpers.cpp src/SignFinder_base.cpp '@conanbuildinfo.args' -o bin/LWChineseZodiacSignFinder`.
 
    - If using a Windows machine, run
      `cl /EHsc src/main.cpp src/SignFinder_helpers.cpp src/SignFinder_base.cpp @conanbuildinfo.args /std:c++latest /Zc:__cplusplus /link /out:bin/LWChineseZodiacSignFinder.exe`.
@@ -46,7 +46,8 @@ Entered years and corresponding zodiac signs:
 
 ## Running Unit Tests
 
-1. If using a Linux machine, run `g++ -o tests/test_suite`.
+1. If using a Linux machine, run 
+   `g++ tests/Catch2_main.cpp tests/test_suite.cpp src/SignFinder_helpers.cpp src/SignFinder_base.cpp @conanbuildinfo.args -o tests/test_suite`.
    - If using a Windows machine, run
      `cl tests/Catch2_main.cpp tests/test_suite.cpp src/SignFinder_helpers.cpp src/SignFinder_base.cpp @conanbuildinfo.args /link /out:tests/test_suite.exe`.
    
