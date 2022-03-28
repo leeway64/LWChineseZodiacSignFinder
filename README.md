@@ -5,13 +5,12 @@ certain year.
 
 ## Installation
 
-1. Clone this repository onto your machine.
+1. Clone this repository onto your machine using
+   `git clone --recursive https://github.com/leeway64/LWChineseZodiacSignFinder.git`.
 
 2. In the root directory of the repository, run `conan install .`.
 
-3. Add the [{fmt}](https://github.com/fmtlib/fmt) library as a Git submodule in the root directory.
-
-4. If using a Linux machine, run
+3. If using a Linux machine, run
    `g++ src/main.cpp src/SignFinder_helpers.cpp '@conanbuildinfo.args' -o bin/LWChineseZodiacSignFinder`.
 
    - If using a Windows machine, run
@@ -56,8 +55,6 @@ Entered years and corresponding zodiac signs:
 
 
 ## Third-party tools
-
-- [CMake](https://cmake.org/) (BSD-3-Clause): Build system generator.
 
 - [toml11](https://github.com/ToruNiina/toml11) (MIT License): TOML parser/encoder.
 
