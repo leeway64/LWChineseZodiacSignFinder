@@ -9,6 +9,11 @@
 class SignFinder_helpers final : public SignFinder_base
 {
 public:
+
+    /// The "delete" keyword removes any function. In this case, the delete keyword removes the
+    /// default constructor.
+    SignFinder_helpers() = delete;
+
     /// Get the Chinese zodiac sign of a certain year.
     /// "noexcept" means that this function doesn't throw exceptions.
     /// I can either say `return-type identifier (argument declarations)` or
