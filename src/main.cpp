@@ -25,7 +25,7 @@ int main()
         output << "title = \"TOML file for user input\"" << std::endl;
         output << std::endl;
         output << "[User_input]" << std::endl;
-        output << "# Enter the years in which you would like to find Chinese zodiac signs for in an array." << std::endl;
+        output << "# Enter the years in which you would like to find Chinese zodiac signs for" << std::endl;
         output << "years = []" << std::endl;
         output.close();
     }
