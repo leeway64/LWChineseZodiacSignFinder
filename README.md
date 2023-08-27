@@ -25,7 +25,7 @@ LWChineseZodiacSignFinder takes in input from a TOML file (this TOML file must b
 title = "TOML file for user input"
 
 [User_input]
-# Enter the years in which you would like to find Chinese zodiac signs for
+# Enter the years in which you would like to find the corresponding Chinese zodiac signs for
 years = [1940, 1968, 1998]
 ```
 
