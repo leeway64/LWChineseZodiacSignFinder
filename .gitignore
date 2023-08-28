@@ -1,5 +1,6 @@
-# Executables
-*.exe
+# Ignore everything in the bin directory except for .gitkeep
+bin/
+!bin/.gitkeep
 
 # Compiled object files
 *.obj

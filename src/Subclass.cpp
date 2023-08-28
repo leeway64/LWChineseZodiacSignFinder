@@ -7,13 +7,13 @@ Subclass::Subclass(){}
 Subclass::~Subclass(){   
     delete node;
     
-    std::cout << "calculate current year's zodiac animal" << std::endl;
+    std::cout << "Happy Lunar New Year!" << std::endl;
 }
 
 void Subclass::message(Success s)
 {
     if (s == Success::success)
     {
-        std::cout << "Zodiac signs successfully found" << std::endl;        
+        std::cout << "\nZodiac signs successfully found" << std::endl;        
     }
 }

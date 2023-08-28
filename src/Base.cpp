@@ -19,6 +19,7 @@ void Base::message(Success s)
 {
     if (s == Success::success)
     {
-        std::cout << "Print intro here" << std::endl;
+        // Raw string literal
+        std::cout << R"(Welcome to LWChineseZodiacSignFinder!)" << std::endl;
     }
 }

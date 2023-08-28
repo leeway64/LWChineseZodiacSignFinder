@@ -12,14 +12,14 @@ certain year.
 ```bash
 git clone --recursive https://github.com/leeway64/LWChineseZodiacSignFinder.git
 conan install .
-g++ src/main.cpp src/SignFinder_helpers.cpp src/SignFinder_base.cpp '@conanbuildinfo.args' -o bin/LWChineseZodiacSignFinder
+g++ src/main.cpp src/SignFinder_helpers.cpp src/SignFinder_base.cpp src/Base.cpp src/Subclass.cpp '@conanbuildinfo.args' -o bin/LWChineseZodiacSignFinder
 ```
 
 
 ## Usage
 
-LWChineseZodiacSignFinder takes in input from a TOML file (this TOML file must be in the
-`bin` folder). For example:
+LWChineseZodiacSignFinder takes in input from a TOML file called `input_file.toml` (this TOML file
+must be in the working directory). For example:
 
 ```toml
 title = "TOML file for user input"
@@ -36,21 +36,35 @@ bin/LWChineseZodiacSignFinder
 
 Which will output:
 ```text
-Entered years and corresponding zodiac signs:
-        1940: Year of the Dragon
-        1968: Year of the Monkey
-        1998: Year of the Tiger
+Welcome to LWChineseZodiacSignFinder!
+Lunar New Year celebrations in Taiwan are the best!
+
+	Year	Zodiac sign
+	===================
+	1940	Dragon
+	1968	Monkey
+	1998	Tiger
+
+Zodiac signs successfully found
 ```
 
 Strictly speaking, the Chinese zodiac follows the lunar calendar. So, each year moves onto the
 next zodiac animal only after the lunar new year.
 
+If `input_file.toml` does not exist, and if you run LWChineseZodiacSignFinder (`bin/LWChineseZodiacSignFinder`),
+then the following will be outputted:
+```text
+No input TOML file found
+Creating a new TOML file
+Happy Lunar New Year!
+```
+
 
 ## Running Unit Tests
 
 ```bash
-g++ tests/Catch2_main.cpp tests/test_suite.cpp src/SignFinder_helpers.cpp src/SignFinder_base.cpp @conanbuildinfo.args -o tests/test_suite
-tests/test_suite
+g++ tests/Catch2_main.cpp tests/test_suite.cpp src/SignFinder_helpers.cpp src/SignFinder_base.cpp @conanbuildinfo.args -o bin/test_suite
+bin/test_suite
 ```
 
 
